@@ -11,6 +11,7 @@ import { MenuBar } from './Pages/MenuBar';
 import { Action } from './Pages/Action';
 import { MOvieDetail } from './Pages/MOvieDetail';
 import { Login } from './components/Login';
+import { AddEmployee } from './forms/AddEmployee';
 
 function App() {
 
@@ -73,15 +74,15 @@ function App() {
   return (
 
     <div className = "App">
-
-    <MenuBar/>
+        <AddEmployee/>
+    {/* <MenuBar/> */}
     <Routes>
       <Route path = "/series" element = {<Series/>}></Route>
       <Route path = "/movies" element = {<Movies/>}></Route>
       <Route path = "/tvshows" element = {<TvShows/>}></Route>
       <Route path = "/series/action" element = {<Action/>}></Route>
       <Route path = "/movies/:id/:id1" element = {<MOvieDetail/>}></Route>
-      <Route path = "/" element = {<Login/>}></Route>
+      {/* <Route path = "/" element = {<Login/>}></Route> */}
       
 
     </Routes>
