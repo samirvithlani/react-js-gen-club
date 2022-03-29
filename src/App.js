@@ -12,6 +12,7 @@ import { Action } from './Pages/Action';
 import { MOvieDetail } from './Pages/MOvieDetail';
 import { Login } from './components/Login';
 import { AddEmployee } from './forms/AddEmployee';
+import { EmployeeDetail } from './forms/EmployeeDetail';
 
 function App() {
 
@@ -82,6 +83,7 @@ function App() {
       <Route path = "/tvshows" element = {<TvShows/>}></Route>
       <Route path = "/series/action" element = {<Action/>}></Route>
       <Route path = "/movies/:id/:id1" element = {<MOvieDetail/>}></Route>
+      <Route path = "/employeedetail/:id" element ={<EmployeeDetail/>}></Route>
       {/* <Route path = "/" element = {<Login/>}></Route> */}
       
 
