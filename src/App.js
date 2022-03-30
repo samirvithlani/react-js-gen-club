@@ -1,24 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home.js'
-import {AboutUs} from './components/AboutUs.js'
+import { AboutUs } from './components/AboutUs.js'
 import { ContactUs } from './components/ContactUs';
-import { Routes,Route } from 'react-router-dom';
-import {Series} from './Pages/Series'
-import {Movies} from './Pages/Movies'
-import {TvShows} from './Pages/TvShows'
+import { Routes, Route } from 'react-router-dom';
+import { Series } from './Pages/Series'
+import { Movies } from './Pages/Movies'
+import { TvShows } from './Pages/TvShows'
 import { MenuBar } from './Pages/MenuBar';
 import { Action } from './Pages/Action';
 import { MOvieDetail } from './Pages/MOvieDetail';
 import { Login } from './components/Login';
 import { AddEmployee } from './forms/AddEmployee';
 import { EmployeeDetail } from './forms/EmployeeDetail';
+import { useState } from 'react';
+import { TicketList } from './ticket/TicketList';
+import { AddTicket } from './ticket/AddTicket';
 
 function App() {
 
   // var st = {
   //   color:"red",
-  
+
   // }
 
   // var name = "ROYAL"
@@ -57,37 +60,60 @@ function App() {
   var name = "royal"
   var contactPersons = [
     {
-      name : "jay",
-      age : 25,
-      contactNo:1234567890
+      name: "jay",
+      age: 25,
+      contactNo: 1234567890
     },
     {
-      name : "rahul",
-      age : 30,
-      contactNo:1234568890
+      name: "rahul",
+      age: 30,
+      contactNo: 1234568890
     },
     {
-      name : "Dhiraj",
-      age : 40,
-      contactNo:8846541654
+      name: "Dhiraj",
+      age: 40,
+      contactNo: 8846541654
     }
   ]
+
+  const [tickets, settickets] = useState([
+    {
+      name: "login bug",
+      desc: "resolve login bug for user"
+    },
+    {
+      name: "logout bug",
+      desc: "resolve logout bug for admin"
+    }
+  ])
+  const deleteTicket = (ticket)=>{
+
+    settickets(tickets.filter(t=>t.name !== ticket.name))
+    
+  }
+  const addTicekt = (ticket)=>{
+
+    settickets([...tickets,ticket])
+  }
+
   return (
 
-    <div className = "App">
-        <AddEmployee/>
-    {/* <MenuBar/> */}
-    <Routes>
-      <Route path = "/series" element = {<Series/>}></Route>
-      <Route path = "/movies" element = {<Movies/>}></Route>
-      <Route path = "/tvshows" element = {<TvShows/>}></Route>
-      <Route path = "/series/action" element = {<Action/>}></Route>
-      <Route path = "/movies/:id/:id1" element = {<MOvieDetail/>}></Route>
-      <Route path = "/employeedetail/:id" element ={<EmployeeDetail/>}></Route>
-      {/* <Route path = "/" element = {<Login/>}></Route> */}
-      
+    <div className="App">
+      <AddTicket addTicekt = {addTicekt}/>
+      <TicketList tickets = {tickets} deleteTicket = {deleteTicket}/>
+      {/* <AddEmployee/> */}
+      {/* <MenuBar/> */}
+      <Routes>
+        <Route path="/series" element={<Series />}></Route>
+        <Route path="/movies" element={<Movies />}></Route>
+        <Route path="/tvshows" element={<TvShows />}></Route>
+        <Route path="/series/action" element={<Action />}></Route>
+        <Route path="/movies/:id/:id1" element={<MOvieDetail />}></Route>
+        <Route path="/employeedetail/:id" element={<EmployeeDetail />}></Route>
+        {/* <Route path = "/" element = {<Login/>}></Route> */}
 
-    </Routes>
+
+      </Routes>
 
 
 
@@ -98,7 +124,7 @@ function App() {
       <ContactUs contactPersons = {contactPersons}/> */}
 
 
-        {/* <h1>Hello</h1>
+      {/* <h1>Hello</h1>
         <h2>{name}</h2>
         <h3>ANS = {no3}</h3>
         <h3>SALRY = {salary}</h3>
@@ -138,7 +164,7 @@ function App() {
 
  */}
 
-        {/* <button onClick = {()=>demo(150)}>CLICK ME</button> */}
+      {/* <button onClick = {()=>demo(150)}>CLICK ME</button> */}
     </div>
   );
 }
