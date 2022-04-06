@@ -16,6 +16,8 @@ import { EmployeeDetail } from './forms/EmployeeDetail';
 import { useState } from 'react';
 import { TicketList } from './ticket/TicketList';
 import { AddTicket } from './ticket/AddTicket';
+import { SimpleForm } from './components/simpleforms/SimpleForm';
+import { SimpleForm1 } from './components/simpleforms/SimpleForm1';
 
 function App() {
 
@@ -76,6 +78,7 @@ function App() {
     }
   ]
 
+  
   const [tickets, settickets] = useState([
     {
       name: "login bug",
@@ -99,8 +102,10 @@ function App() {
   return (
 
     <div className="App">
-      <AddTicket addTicekt = {addTicekt}/>
-      <TicketList tickets = {tickets} deleteTicket = {deleteTicket}/>
+      {/* <AddTicket addTicekt = {addTicekt}/>
+      <TicketList tickets = {tickets} deleteTicket = {deleteTicket}/> */}
+      {/* <SimpleForm/> */}
+      <SimpleForm1/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       <Routes>
