@@ -19,6 +19,8 @@ import { AddTicket } from './ticket/AddTicket';
 import { SimpleForm } from './components/simpleforms/SimpleForm';
 import { SimpleForm1 } from './components/simpleforms/SimpleForm1';
 import { Users } from './api/Users';
+import { AddDoctor } from './api/doctor/AddDoctor';
+import { DoctorList } from './api/doctor/DoctorList';
 
 function App() {
 
@@ -107,7 +109,9 @@ function App() {
       <TicketList tickets = {tickets} deleteTicket = {deleteTicket}/> */}
       {/* <SimpleForm/> */}
       {/* <SimpleForm1/> */}
-      <Users/>
+      {/* <Users/> */}
+      <AddDoctor/>
+      <DoctorList/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       <Routes>
