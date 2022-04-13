@@ -21,6 +21,7 @@ import { SimpleForm1 } from './components/simpleforms/SimpleForm1';
 import { Users } from './api/Users';
 import { AddDoctor } from './api/doctor/AddDoctor';
 import { DoctorList } from './api/doctor/DoctorList';
+import { UpdateDoctor } from './api/doctor/UpdateDoctor';
 
 function App() {
 
@@ -112,6 +113,7 @@ function App() {
       {/* <Users/> */}
       <AddDoctor/>
       <DoctorList/>
+
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       <Routes>
@@ -121,6 +123,7 @@ function App() {
         <Route path="/series/action" element={<Action />}></Route>
         <Route path="/movies/:id/:id1" element={<MOvieDetail />}></Route>
         <Route path="/employeedetail/:id" element={<EmployeeDetail />}></Route>
+        <Route path="/updatedoctor/:id" element={<UpdateDoctor />}></Route>
         {/* <Route path = "/" element = {<Login/>}></Route> */}
 
 

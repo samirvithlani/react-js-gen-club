@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 
 import { ToastContainer, toast } from 'react-toastify';
@@ -66,6 +67,7 @@ export const DoctorList = () => {
                         <th scope="col">Experiance</th>
                         <th scope="col">Email</th>
                         <th scope="col">AGe</th>
+                        <th>ACTION</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,7 +79,8 @@ export const DoctorList = () => {
                                 <td>{doctor.dExp}</td>
                                 <td>{doctor.dEmail}</td>
                                 <td>{doctor.dAge}</td>
-                                <td><button className="btn btn-danger" onClick={() => { deleteDoctor(doctor.dId) }}>DELETE DOCTOR</button></td>
+                                <td><button className="btn btn-danger" onClick={() => { deleteDoctor(doctor.dId) }}>DELETE DOCTOR</button>
+                                <Link to = {`/updatedoctor/${doctor.dId}`} className="btn btn-primary" >UPDATE DOCTOR</Link></td>
 
                             </tr>
 
