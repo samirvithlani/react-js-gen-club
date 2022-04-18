@@ -22,6 +22,9 @@ import { Users } from './api/Users';
 import { AddDoctor } from './api/doctor/AddDoctor';
 import { DoctorList } from './api/doctor/DoctorList';
 import { UpdateDoctor } from './api/doctor/UpdateDoctor';
+import { LoginDemo } from './storage/LoginDemo';
+import { LoggedInData } from './storage/LoggedInData';
+import { FileUpload } from './uploader/FileUpload';
 
 function App() {
 
@@ -82,7 +85,7 @@ function App() {
     }
   ]
 
-  
+
   const [tickets, settickets] = useState([
     {
       name: "login bug",
@@ -93,14 +96,14 @@ function App() {
       desc: "resolve logout bug for admin"
     }
   ])
-  const deleteTicket = (ticket)=>{
+  const deleteTicket = (ticket) => {
 
-    settickets(tickets.filter(t=>t.name !== ticket.name))
-    
+    settickets(tickets.filter(t => t.name !== ticket.name))
+
   }
-  const addTicekt = (ticket)=>{
+  const addTicekt = (ticket) => {
 
-    settickets([...tickets,ticket])
+    settickets([...tickets, ticket])
   }
 
   return (
@@ -111,9 +114,12 @@ function App() {
       {/* <SimpleForm/> */}
       {/* <SimpleForm1/> */}
       {/* <Users/> */}
-      <AddDoctor/>
-      <DoctorList/>
+      {/* <AddDoctor/>
+      <DoctorList/> */}
 
+      {/* <LoginDemo />
+      <LoggedInData /> */}
+      <FileUpload/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       <Routes>
