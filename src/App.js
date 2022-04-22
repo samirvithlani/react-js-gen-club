@@ -20,11 +20,13 @@ import { SimpleForm } from './components/simpleforms/SimpleForm';
 import { SimpleForm1 } from './components/simpleforms/SimpleForm1';
 import { Users } from './api/Users';
 import { AddDoctor } from './api/doctor/AddDoctor';
-import { DoctorList } from './api/doctor/DoctorList';
-import { UpdateDoctor } from './api/doctor/UpdateDoctor';
+
+import { DoctorList } from './protectedrout/DoctorList';
 import { LoginDemo } from './storage/LoginDemo';
 import { LoggedInData } from './storage/LoggedInData';
 import { FileUpload } from './uploader/FileUpload';
+import { TableDemo } from './mui/TableDemo';
+import { DoctorLogin } from './protectedrout/DoctorLogin';
 
 function App() {
 
@@ -119,7 +121,7 @@ function App() {
 
       {/* <LoginDemo />
       <LoggedInData /> */}
-      <FileUpload/>
+      <DoctorLogin/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       <Routes>
@@ -129,7 +131,9 @@ function App() {
         <Route path="/series/action" element={<Action />}></Route>
         <Route path="/movies/:id/:id1" element={<MOvieDetail />}></Route>
         <Route path="/employeedetail/:id" element={<EmployeeDetail />}></Route>
-        <Route path="/updatedoctor/:id" element={<UpdateDoctor />}></Route>
+        { sessionStorage.getItem('doctorId') >0 ?
+        <Route path="/doctorlist" element={<DoctorList />}></Route>
+        :"/"}
         {/* <Route path = "/" element = {<Login/>}></Route> */}
 
 
