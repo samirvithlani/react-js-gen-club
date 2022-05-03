@@ -27,6 +27,8 @@ import { LoggedInData } from './storage/LoggedInData';
 import { FileUpload } from './uploader/FileUpload';
 import { TableDemo } from './mui/TableDemo';
 import { DoctorLogin } from './protectedrout/DoctorLogin';
+import { Prod } from './components/errorHandling/Prod';
+import { TryDemo } from './components/errorHandling/TryDemo';
 
 function App() {
 
@@ -121,24 +123,11 @@ function App() {
 
       {/* <LoginDemo />
       <LoggedInData /> */}
-      <DoctorLogin/>
+      {/* <DoctorLogin/> */}
+      <TryDemo/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
-      <Routes>
-        <Route path="/series" element={<Series />}></Route>
-        <Route path="/movies" element={<Movies />}></Route>
-        <Route path="/tvshows" element={<TvShows />}></Route>
-        <Route path="/series/action" element={<Action />}></Route>
-        <Route path="/movies/:id/:id1" element={<MOvieDetail />}></Route>
-        <Route path="/employeedetail/:id" element={<EmployeeDetail />}></Route>
-        { sessionStorage.getItem('doctorId') >0 ?
-        <Route path="/doctorlist" element={<DoctorList />}></Route>
-        :"/"}
-        {/* <Route path = "/" element = {<Login/>}></Route> */}
-
-
-      </Routes>
-
+      
 
 
       {/* <h1>APP JS</h1>
