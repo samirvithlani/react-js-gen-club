@@ -29,6 +29,7 @@ import { TableDemo } from './mui/TableDemo';
 import { DoctorLogin } from './protectedrout/DoctorLogin';
 import { Prod } from './components/errorHandling/Prod';
 import { TryDemo } from './components/errorHandling/TryDemo';
+import { QueryDemo } from './query/QueryDemo';
 
 function App() {
 
@@ -124,7 +125,7 @@ function App() {
       {/* <LoginDemo />
       <LoggedInData /> */}
       {/* <DoctorLogin/> */}
-      <TryDemo/>
+      <QueryDemo/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       
