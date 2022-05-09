@@ -30,6 +30,7 @@ import { DoctorLogin } from './protectedrout/DoctorLogin';
 import { Prod } from './components/errorHandling/Prod';
 import { TryDemo } from './components/errorHandling/TryDemo';
 import { QueryDemo } from './query/QueryDemo';
+import { QueryDemo2 } from './query/QueryDemo2';
 
 function App() {
 
@@ -125,7 +126,7 @@ function App() {
       {/* <LoginDemo />
       <LoggedInData /> */}
       {/* <DoctorLogin/> */}
-      <QueryDemo/>
+      <QueryDemo2/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       
