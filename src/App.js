@@ -31,6 +31,7 @@ import { Prod } from './components/errorHandling/Prod';
 import { TryDemo } from './components/errorHandling/TryDemo';
 import { QueryDemo } from './query/QueryDemo';
 import { QueryDemo2 } from './query/QueryDemo2';
+import { QueryDemo3 } from './query/QueryDemo3';
 
 function App() {
 
@@ -126,7 +127,7 @@ function App() {
       {/* <LoginDemo />
       <LoggedInData /> */}
       {/* <DoctorLogin/> */}
-      <QueryDemo2/>
+      <QueryDemo3/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
       
