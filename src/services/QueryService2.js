@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
+//pagination with useQuary
 export function useService(a){
 
     return useQuery(["demo1",a],async ()=>{

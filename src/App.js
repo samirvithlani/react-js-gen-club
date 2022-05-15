@@ -32,6 +32,7 @@ import { TryDemo } from './components/errorHandling/TryDemo';
 import { QueryDemo } from './query/QueryDemo';
 import { QueryDemo2 } from './query/QueryDemo2';
 import { QueryDemo3 } from './query/QueryDemo3';
+import { QueryDemo4 } from './query/QueryDemo4';
 
 function App() {
 
@@ -127,10 +128,11 @@ function App() {
       {/* <LoginDemo />
       <LoggedInData /> */}
       {/* <DoctorLogin/> */}
-      <QueryDemo3/>
+      {/* <QueryDemo3/> */}
+      <QueryDemo4 />
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
-      
+
 
 
       {/* <h1>APP JS</h1>
