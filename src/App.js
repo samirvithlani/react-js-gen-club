@@ -33,6 +33,7 @@ import { QueryDemo } from './query/QueryDemo';
 import { QueryDemo2 } from './query/QueryDemo2';
 import { QueryDemo3 } from './query/QueryDemo3';
 import { QueryDemo4 } from './query/QueryDemo4';
+import { QueryDemo5 } from './query/QueryDemo5';
 
 function App() {
 
@@ -129,7 +130,7 @@ function App() {
       <LoggedInData /> */}
       {/* <DoctorLogin/> */}
       {/* <QueryDemo3/> */}
-      <QueryDemo4 />
+      <QueryDemo5 />
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
 
