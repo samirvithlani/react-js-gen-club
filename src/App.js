@@ -34,6 +34,9 @@ import { QueryDemo2 } from './query/QueryDemo2';
 import { QueryDemo3 } from './query/QueryDemo3';
 import { QueryDemo4 } from './query/QueryDemo4';
 import { QueryDemo5 } from './query/QueryDemo5';
+import { MuiDemo1 } from './muidemo/MuiDemo1';
+import { MuiDemo2 } from './muidemo/MuiDemo2';
+import { MuiDemo3 } from './muidemo/MuiDemo3';
 
 function App() {
 
@@ -130,7 +133,9 @@ function App() {
       <LoggedInData /> */}
       {/* <DoctorLogin/> */}
       {/* <QueryDemo3/> */}
-      <QueryDemo5 />
+      {/* <MuiDemo1/>
+      <MuiDemo2/> */}
+      <MuiDemo3/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
 
