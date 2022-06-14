@@ -37,6 +37,7 @@ import { QueryDemo5 } from './query/QueryDemo5';
 import { MuiDemo1 } from './muidemo/MuiDemo1';
 import { MuiDemo2 } from './muidemo/MuiDemo2';
 import { MuiDemo3 } from './muidemo/MuiDemo3';
+import { FormikDemo1 } from './formik/FormikDemo1';
 
 function App() {
 
@@ -135,7 +136,7 @@ function App() {
       {/* <QueryDemo3/> */}
       {/* <MuiDemo1/>
       <MuiDemo2/> */}
-      <MuiDemo3/>
+      <FormikDemo1/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
 
