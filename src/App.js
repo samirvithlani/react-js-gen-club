@@ -136,6 +136,7 @@ function App() {
       {/* <QueryDemo3/> */}
       {/* <MuiDemo1/>
       <MuiDemo2/> */}
+      {/* <FormikDemo1/> */}
       <FormikDemo1/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
