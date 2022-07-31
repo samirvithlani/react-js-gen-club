@@ -38,6 +38,8 @@ import { MuiDemo1 } from './muidemo/MuiDemo1';
 import { MuiDemo2 } from './muidemo/MuiDemo2';
 import { MuiDemo3 } from './muidemo/MuiDemo3';
 import { FormikDemo1 } from './formik/FormikDemo1';
+import { FormikDemo2 } from './formik/FormikDemo2';
+import { HookFromDemo1 } from './HookForms/HookFromDemo1';
 
 function App() {
 
@@ -137,7 +139,9 @@ function App() {
       {/* <MuiDemo1/>
       <MuiDemo2/> */}
       {/* <FormikDemo1/> */}
-      <FormikDemo1/>
+      {/* <FormikDemo1/> */}
+      {/* <FormikDemo2/> */}
+      <HookFromDemo1/>
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
 
