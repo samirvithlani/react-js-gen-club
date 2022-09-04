@@ -12,8 +12,12 @@ export const HookFromDemo1 = () => {
         name:{required:"name is required"},
         email:{required:"email is required",minLength:{
             value:5,
-            message : "check len"
-        }}
+            message : "check len" 
+        }},
+        phone:{
+            pattert:"^[6-9]{1}[0-9]{9}$",
+            message:"check phone no"
+        }
     }
   return (
     <div>
@@ -28,12 +32,17 @@ export const HookFromDemo1 = () => {
             <div>
                 <label htmlFor="email">Email</label>
                 <input name = "email" {...register('email',validationSchema.email)}/>
+                
+            </div>
+            <div>
+                <label htmlFor="phone">Phone</label>
+                <input name = "phone" {...register('phone',validationSchema.email)}/>
                 {
-                    errors?.email && <div>{errors.email.message}</div>
+                    errors?.email && <div>{errors.phone.message}</div>
                 }
             </div>
             <div>
-                <input type="submit" value="submit"/>
+                <input disabled={errors}type="submit" value="submit"/>
             </div>
         </form>
 

@@ -40,6 +40,9 @@ import { MuiDemo3 } from './muidemo/MuiDemo3';
 import { FormikDemo1 } from './formik/FormikDemo1';
 import { FormikDemo2 } from './formik/FormikDemo2';
 import { HookFromDemo1 } from './HookForms/HookFromDemo1';
+import {appContext} from './contextdemo/context'
+import { AddUser } from './contextdemo/AddUser';
+import { UserList } from './contextdemo/UserList';
 
 function App() {
 
@@ -121,6 +124,27 @@ function App() {
     settickets([...tickets, ticket])
   }
 
+ const [user, setuser] = useState([
+  {
+    name: "jay",
+    age: 25,
+  }
+ ])
+
+ const dispatachUserEvent = (actiontype,payload)=>{
+  switch(actiontype){
+    case 'ADD_USER':
+      setuser([...user,payload])
+      return;
+     case 'DELETE_USER':
+        setuser(user.filter(u=>u.name !== payload.name))
+        return;
+        default:
+          return;
+
+  }
+ }
+
   return (
 
     <div className="App">
@@ -141,11 +165,15 @@ function App() {
       {/* <FormikDemo1/> */}
       {/* <FormikDemo1/> */}
       {/* <FormikDemo2/> */}
-      <HookFromDemo1/>
+      {/* <HookFromDemo1/> */}
+      
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
 
-
+        <appContext.Provider value={{user,dispatachUserEvent}}>
+          <AddUser/>
+          <UserList/>
+          </appContext.Provider>
 
       {/* <h1>APP JS</h1>
 
