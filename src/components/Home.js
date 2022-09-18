@@ -5,9 +5,6 @@ export default function Home(props) {
     <div>
         <h2>HOME COMPONENT</h2>
         <h1> Name = 
-        {
-            props.name
-        }
         </h1>
     </div>
   )

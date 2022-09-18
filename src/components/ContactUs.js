@@ -17,22 +17,7 @@ export const ContactUs = (props) => {
                             </tr>
                         </thead>
                         <tbody>
-                            {
-                                props.contactPersons.map((person) => {
-                                    return (<tr>
-                                        
-                                        <td>{person.name}</td>
-                                        <td>{person.age}
-                                            {
-                                                person.age <=30 ? <h4>YOU ARE A YOUNG</h4>: <h4>YOU ARE AN OLD</h4>
-                                            }
-                                        </td>
-                                        <td>{person.contactNo}</td>
-                                    </tr>
-                                    )
-                                })
-                            }
-
+                            
                         </tbody>
                     </table>
                 </div>

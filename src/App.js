@@ -1,51 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
-import Home from './components/Home.js'
-import { AboutUs } from './components/AboutUs.js'
-import { ContactUs } from './components/ContactUs';
-import { Routes, Route } from 'react-router-dom';
-import { Series } from './Pages/Series'
-import { Movies } from './Pages/Movies'
-import { TvShows } from './Pages/TvShows'
-import { MenuBar } from './Pages/MenuBar';
-import { Action } from './Pages/Action';
-import { MOvieDetail } from './Pages/MOvieDetail';
-import { Login } from './components/Login';
-import { AddEmployee } from './forms/AddEmployee';
-import { EmployeeDetail } from './forms/EmployeeDetail';
-import { useState } from 'react';
-import { TicketList } from './ticket/TicketList';
-import { AddTicket } from './ticket/AddTicket';
-import { SimpleForm } from './components/simpleforms/SimpleForm';
-import { SimpleForm1 } from './components/simpleforms/SimpleForm1';
-import { Users } from './api/Users';
-import { AddDoctor } from './api/doctor/AddDoctor';
+import logo from "./logo.svg";
+import "./App.css";
+import Home from "./components/Home.js";
+import { AboutUs } from "./components/AboutUs.js";
+import { ContactUs } from "./components/ContactUs";
+import { Routes, Route } from "react-router-dom";
+import { Series } from "./Pages/Series";
+import { Movies } from "./Pages/Movies";
+import { TvShows } from "./Pages/TvShows";
+import { MenuBar } from "./Pages/MenuBar";
+import { Action } from "./Pages/Action";
+import { MOvieDetail } from "./Pages/MOvieDetail";
+import { Login } from "./components/Login";
+import { AddEmployee } from "./forms/AddEmployee";
+import { EmployeeDetail } from "./forms/EmployeeDetail";
+import { useState } from "react";
+import { TicketList } from "./ticket/TicketList";
+import { AddTicket } from "./ticket/AddTicket";
+import { SimpleForm } from "./components/simpleforms/SimpleForm";
+import { SimpleForm1 } from "./components/simpleforms/SimpleForm1";
+import { Users } from "./api/Users";
+import { AddDoctor } from "./api/doctor/AddDoctor";
 
-import { DoctorList } from './protectedrout/DoctorList';
-import { LoginDemo } from './storage/LoginDemo';
-import { LoggedInData } from './storage/LoggedInData';
-import { FileUpload } from './uploader/FileUpload';
-import { TableDemo } from './mui/TableDemo';
-import { DoctorLogin } from './protectedrout/DoctorLogin';
-import { Prod } from './components/errorHandling/Prod';
-import { TryDemo } from './components/errorHandling/TryDemo';
-import { QueryDemo } from './query/QueryDemo';
-import { QueryDemo2 } from './query/QueryDemo2';
-import { QueryDemo3 } from './query/QueryDemo3';
-import { QueryDemo4 } from './query/QueryDemo4';
-import { QueryDemo5 } from './query/QueryDemo5';
-import { MuiDemo1 } from './muidemo/MuiDemo1';
-import { MuiDemo2 } from './muidemo/MuiDemo2';
-import { MuiDemo3 } from './muidemo/MuiDemo3';
-import { FormikDemo1 } from './formik/FormikDemo1';
-import { FormikDemo2 } from './formik/FormikDemo2';
-import { HookFromDemo1 } from './HookForms/HookFromDemo1';
-import {appContext} from './contextdemo/context'
-import { AddUser } from './contextdemo/AddUser';
-import { UserList } from './contextdemo/UserList';
+import { DoctorList } from "./protectedrout/DoctorList";
+import { LoginDemo } from "./storage/LoginDemo";
+import { LoggedInData } from "./storage/LoggedInData";
+import { FileUpload } from "./uploader/FileUpload";
+import { TableDemo } from "./mui/TableDemo";
+import { DoctorLogin } from "./protectedrout/DoctorLogin";
+import { Prod } from "./components/errorHandling/Prod";
+import { TryDemo } from "./components/errorHandling/TryDemo";
+import { QueryDemo } from "./query/QueryDemo";
+import { QueryDemo2 } from "./query/QueryDemo2";
+import { QueryDemo3 } from "./query/QueryDemo3";
+import { QueryDemo4 } from "./query/QueryDemo4";
+import { QueryDemo5 } from "./query/QueryDemo5";
+import { MuiDemo1 } from "./muidemo/MuiDemo1";
+import { MuiDemo2 } from "./muidemo/MuiDemo2";
+import { MuiDemo3 } from "./muidemo/MuiDemo3";
+import { FormikDemo1 } from "./formik/FormikDemo1";
+import { FormikDemo2 } from "./formik/FormikDemo2";
+import { HookFromDemo1 } from "./HookForms/HookFromDemo1";
+import { appContext } from "./contextdemo/context";
+import { AddUser } from "./contextdemo/AddUser";
+import { UserList } from "./contextdemo/UserList";
+import { Navbar } from "./components/Navbar";
+import ProtectedRoute from "./ProtectedRoutes";
 
 function App() {
-
   // var st = {
   //   color:"red",
 
@@ -80,73 +81,66 @@ function App() {
   //   },
   // ]
 
-
   // const demo =(x)=>{
   //   console.log("demo",x)
   // }
-  var name = "royal"
+  var name = "royal";
   var contactPersons = [
     {
       name: "jay",
       age: 25,
-      contactNo: 1234567890
+      contactNo: 1234567890,
     },
     {
       name: "rahul",
       age: 30,
-      contactNo: 1234568890
+      contactNo: 1234568890,
     },
     {
       name: "Dhiraj",
       age: 40,
-      contactNo: 8846541654
-    }
-  ]
-
+      contactNo: 8846541654,
+    },
+  ];
 
   const [tickets, settickets] = useState([
     {
       name: "login bug",
-      desc: "resolve login bug for user"
+      desc: "resolve login bug for user",
     },
     {
       name: "logout bug",
-      desc: "resolve logout bug for admin"
-    }
-  ])
+      desc: "resolve logout bug for admin",
+    },
+  ]);
   const deleteTicket = (ticket) => {
-
-    settickets(tickets.filter(t => t.name !== ticket.name))
-
-  }
+    settickets(tickets.filter((t) => t.name !== ticket.name));
+  };
   const addTicekt = (ticket) => {
+    settickets([...tickets, ticket]);
+  };
 
-    settickets([...tickets, ticket])
-  }
+  const [user, setuser] = useState([
+    {
+      name: "jay",
+      age: 25,
+    },
+  ]);
 
- const [user, setuser] = useState([
-  {
-    name: "jay",
-    age: 25,
-  }
- ])
-
- const dispatachUserEvent = (actiontype,payload)=>{
-  switch(actiontype){
-    case 'ADD_USER':
-      setuser([...user,payload])
-      return;
-     case 'DELETE_USER':
-        setuser(user.filter(u=>u.name !== payload.name))
+  const dispatachUserEvent = (actiontype, payload) => {
+    switch (actiontype) {
+      case "ADD_USER":
+        setuser([...user, payload]);
         return;
-        default:
-          return;
-
-  }
- }
+      case "DELETE_USER":
+        setuser(user.filter((u) => u.name !== payload.name));
+        return;
+      default:
+        return;
+    }
+  };
 
   return (
-
     <div className="App">
       {/* <AddTicket addTicekt = {addTicekt}/>
       <TicketList tickets = {tickets} deleteTicket = {deleteTicket}/> */}
@@ -166,21 +160,31 @@ function App() {
       {/* <FormikDemo1/> */}
       {/* <FormikDemo2/> */}
       {/* <HookFromDemo1/> */}
-      
+
       {/* <AddEmployee/> */}
       {/* <MenuBar/> */}
-
+      <Navbar />
+      <Routes>
+        <Route element={<ProtectedRoute/>}>
+          <Route path="/add" element={<AddDoctor />}></Route>
+          <Route path="/aboutus" element={<AboutUs />}></Route>
+          <Route path="/contactus" element={<ContactUs />}></Route>
+        </Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+      </Routes>
+      {/* 
         <appContext.Provider value={{user,dispatachUserEvent}}>
-          <AddUser/>
-          <UserList/>
-          </appContext.Provider>
+          <Routes>
+            <Route path='/users' element={<UserList/>}/>
+          </Routes>
+        </appContext.Provider> */}
 
       {/* <h1>APP JS</h1>
 
       <Home name = {name}/>
       
       <ContactUs contactPersons = {contactPersons}/> */}
-
 
       {/* <h1>Hello</h1>
         <h2>{name}</h2>
